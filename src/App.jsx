@@ -1,13 +1,16 @@
-import { useState } from 'react'
+import { useState } from "react";
+import Header from "./components/Header";
+import { Hero } from "./components/Hero"; 
+import { Features } from "./components/Features";
 
 function App() {
-
-
   return (
     <>
-      <h1 className='text-4xl font text-blue-300'>Welcome to Almaris</h1>
+      <Header />
+      <Hero/>
+      <Features />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
