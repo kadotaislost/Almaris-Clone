@@ -29,7 +29,7 @@ export const SectionHeader = ({
         {title}
       </h2>
 
-      <p className={`text-[#c3c3c3] font-jost font-light leading-[32px] ${alignment}`}>
+      <p className={`text-[#c3c3c3] font-jost font-light text-[17px] leading-[32px] ${alignment}`}>
         {description}
       </p>
     </div>

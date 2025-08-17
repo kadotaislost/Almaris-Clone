@@ -4,6 +4,10 @@ import { Hero } from "./components/Hero";
 import { Features } from "./components/Features";
 import { DemoPreview } from "./components/DemoPreview";
 import { Pricing } from "./components/Pricing";
+import { Reviews } from "./components/Reviews";
+import { Booking } from "./components/Booking";
+import { InnerPagePreview } from "./components/InnerPagePreview";
+import { Ending } from "./components/Ending";
 
 function App() {
   return (
@@ -13,6 +17,10 @@ function App() {
       <Features />
       <DemoPreview />
       <Pricing />
+      <Reviews />
+      <Booking />
+      <InnerPagePreview />
+      <Ending />
     </>
   );
 }
