@@ -1,6 +1,6 @@
 export const Ending = () => {
   return (
-    <section className="min-h-screen bg-[url('https://themewant.com/products/wordpress/landing/almaris/demo-wp/bg-2.webp')] flex items-center justify-center">
+    <section className="min-h-screen bg-[url('https://themewant.com/products/wordpress/landing/almaris/demo-wp/bg-2.webp')] flex items-center justify-center relative ">
       <div className="text-center max-w-[1000px] mx-auto px-[12px]">
         <div className="mb-[16px] text-[#ab8965] tracking-[2px] font-semibold text-[13px] font-jost">
           GET ALMARIS NOW
@@ -18,6 +18,7 @@ export const Ending = () => {
           $55 - PURCHASE NOW
         </a>
       </div>
+      <div class="absolute bottom-0 h-[30%] w-full bg-gradient-to-t from-[#ab8965]/80 from-25% to-transparent z-1"></div>
     </section>
   );
 };
