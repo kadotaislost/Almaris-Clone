@@ -1,9 +1,31 @@
+import { useState, useEffect } from "react";
+
 export const Hero = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Calculate transform values based on scroll position
+  // The images will move down as we scroll down (max 600px movement)
+  const imageTransform = Math.min(scrollY * 0.8, 600);
+
   return (
     <section className="bg-[url('https://themewant.com/products/wordpress/landing/almaris/demo-wp/bg.webp')] bg-cover bg-center bg-no-repeat min-h-screen relative">
       <main className="flex items-center min-h-screen font-marcellus relative">
         {/* Left bottom corner image */}
-        <div className="absolute bottom-0 left-0 w-[40%]">
+        <div
+          className="absolute bottom-0 left-0 w-[40%] transition-transform duration-120 ease-in-out"
+          style={{
+            transform: `translateY(${imageTransform}px)`,
+          }}
+        >
           <img
             src="https://themewant.com/products/wordpress/landing/almaris/demo-wp/ss-left.webp"
             alt="image-left"
@@ -37,7 +59,12 @@ export const Hero = () => {
         </div>
 
         {/* Right bottom corner image */}
-        <div className="absolute bottom-0 right-0 w-[40%]">
+        <div
+          className="absolute bottom-0 right-0 w-[40%] transition-transform duration-120 ease-in-out"
+          style={{
+            transform: `translateY(${imageTransform}px)`,
+          }}
+        >
           <img
             src="https://themewant.com/products/wordpress/landing/almaris/demo-wp/ss-right.webp"
             alt="image-right"

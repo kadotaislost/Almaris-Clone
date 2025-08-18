@@ -28,7 +28,7 @@ export const Features = () => {
     },
   ];
   return (
-    <section className="min-h-screen bg-[#181818] flex items-center justify-center">
+    <section className="min-h-screen bg-[#181818] flex items-center justify-center relative z-50">
       <div className="max-w-[1824px] mx-auto px-4 ">
         <SectionHeader
           subtitle="POWERFULL FEATURES"
