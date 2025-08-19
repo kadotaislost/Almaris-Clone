@@ -66,7 +66,7 @@ export const InnerPagePreview = () => {
   ];
 
   return (
-    <section className="min-h-screen bg-white py-[140px]">
+    <section className="min-h-screen bg-white pb-[140px]">
       <div className="max-w-[1824px] mx-auto px-4">
         <SectionHeader
           subtitle="ALL DEMOS ARE INCLUDED"
