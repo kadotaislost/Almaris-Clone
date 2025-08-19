@@ -1,10 +1,26 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Marcellus&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Marcellus&display=swap");
 
 @import "tailwindcss";
 
-
 @theme {
-  --font-marcellus: 'Marcellus', serif;
-  --font-jost: 'Jost', sans-serif;
+  --font-marcellus: "Marcellus", serif;
+  --font-jost: "Jost", sans-serif;
+}
+
+/* Custom Swiper Styles */
+.booking-swiper .swiper-slide {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 556px;
+  margin-right: 30px;
+}
+
+.booking-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+/* Hide default swiper navigation buttons since we're using custom ones */
+.booking-swiper .swiper-button-next,
+.booking-swiper .swiper-button-prev {
+  display: none;
 }
