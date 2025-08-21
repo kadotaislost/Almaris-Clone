@@ -44,7 +44,7 @@ export const Booking = () => {
   ];
 
   return (
-    <section className="min-h-screen bg-white py-[140px] px-4">
+    <section className="min-h-screen bg-white py-[140px] px-4 lg:px-12">
       <div className="max-w-[1824px] mx-auto bg-[#181818] rounded-xl px-4 py-[48px] relative">
         <div className="mb-[60px]"></div>
         <div className="w-full max-w-[1232px] mx-auto px-[48px]">

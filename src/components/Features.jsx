@@ -28,7 +28,7 @@ export const Features = () => {
     },
   ];
   return (
-    <section className="min-h-screen bg-[#181818]  relative z-50 py-[70px] lg:py-[140px]">
+    <section className="min-h-screen bg-[#181818]  relative z-50 py-[70px] lg:py-[140px] lg:px-8">
       <div className="max-w-[1824px] mx-auto px-4 ">
         <SectionHeader
           subtitle="POWERFULL FEATURES"

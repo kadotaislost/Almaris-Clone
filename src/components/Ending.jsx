@@ -1,6 +1,6 @@
 export const Ending = () => {
   return (
-    <section className="min-h-screen bg-[url('https://themewant.com/products/wordpress/landing/almaris/demo-wp/bg-2.webp')] flex items-center justify-center relative ">
+    <section className="min-h-screen bg-[url('https://themewant.com/products/wordpress/landing/almaris/demo-wp/bg-2.webp')] flex items-center justify-center relative bg-cover">
       <div className="text-center max-w-[1000px] mx-auto px-[12px]">
         <div className="mb-[16px] text-[#ab8965] tracking-[2px] font-semibold text-[13px] font-jost">
           GET ALMARIS NOW

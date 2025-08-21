@@ -55,7 +55,7 @@ export const Pricing = () => {
   ];
 
   return (
-    <section className="min-h-screen bg-white px-4">
+    <section className="min-h-screen bg-white px-4 lg:px-12">
       <div className="max-w-[1824px] mx-auto px-4 bg-[#181818] rounded-xl py-[48px]">
         <div className="mb-[60px]"></div>
         <SectionHeader

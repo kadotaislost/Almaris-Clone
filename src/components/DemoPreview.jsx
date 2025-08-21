@@ -113,7 +113,7 @@ export const DemoPreview = () => {
     },
   ];
   return (
-    <section className="min-h-screen bg-white flex items-center justify-center py-[70px] lg:py-[140px]">
+    <section className="min-h-screen bg-white flex items-center justify-center py-[70px] lg:py-[140px] lg:px-8">
       <div className="max-w-[1824px] mx-auto px-4 ">
         <SectionHeader
           subtitle="ALL DEMO ARE INCLUDED"
