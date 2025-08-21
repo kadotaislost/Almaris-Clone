@@ -12,29 +12,35 @@ export const Booking = () => {
 
   const bookingFeatures = [
     {
-      image: "https://themewant.com/products/wordpress/landing/almaris/demo-wp/feature-room-management.webp",
-      title: "Room Management"
+      image:
+        "https://themewant.com/products/wordpress/landing/almaris/demo-wp/feature-room-management.webp",
+      title: "Room Management",
     },
     {
-      image: "https://themewant.com/products/wordpress/landing/almaris/demo-wp/feature-room-reservation.webp",
-      title: "Room Reservation"
+      image:
+        "https://themewant.com/products/wordpress/landing/almaris/demo-wp/feature-room-reservation.webp",
+      title: "Room Reservation",
     },
     {
-      image: "https://themewant.com/products/wordpress/landing/almaris/demo-wp/feature-room-search-filter.webp",
-      title: "Room Search & Filter"
+      image:
+        "https://themewant.com/products/wordpress/landing/almaris/demo-wp/feature-room-search-filter.webp",
+      title: "Room Search & Filter",
     },
     {
-      image: "https://themewant.com/products/wordpress/landing/almaris/demo-wp/feature-extra-services.webp",
-      title: "Extra Services"
+      image:
+        "https://themewant.com/products/wordpress/landing/almaris/demo-wp/feature-extra-services.webp",
+      title: "Extra Services",
     },
     {
-      image: "https://themewant.com/products/wordpress/landing/almaris/demo-wp/feature-room-list.webp",
-      title: "Room List"
+      image:
+        "https://themewant.com/products/wordpress/landing/almaris/demo-wp/feature-room-list.webp",
+      title: "Room List",
     },
     {
-      image: "https://themewant.com/products/wordpress/landing/almaris/demo-wp/feature-email-notification.webp",
-      title: "Email Notification"
-    }
+      image:
+        "https://themewant.com/products/wordpress/landing/almaris/demo-wp/feature-email-notification.webp",
+      title: "Email Notification",
+    },
   ];
 
   return (
@@ -55,13 +61,13 @@ export const Booking = () => {
           {/* Custom Navigation Buttons */}
           <button
             ref={prevRef}
-            className="absolute left-0 top-7/12 transform -translate-y-1/2 z-10 rounded-r-full w-[40px] h-[40px] bg-[#ab8965] flex items-center justify-center text-white hover:bg-[#95764f] transition-colors duration-300 cursor-pointer"
+            className="absolute left-0 top-[63%] transform -translate-y-1/2 z-10 rounded-r-full w-[40px] h-[40px] bg-[#ab8965] flex items-center justify-center text-white hover:bg-[#95764f] transition-colors duration-300 cursor-pointer"
           >
             <ChevronLeft size={20} />
           </button>
           <button
             ref={nextRef}
-            className="absolute right-0 top-7/12 transform -translate-y-1/2 z-10 rounded-l-full w-[40px] h-[40px] bg-[#ab8965] flex items-center justify-center text-white hover:bg-[#95764f] transition-colors duration-300 cursor-pointer"
+            className="absolute right-0 top-[63%] transform -translate-y-1/2 z-10 rounded-l-full w-[40px] h-[40px] bg-[#ab8965] flex items-center justify-center text-white hover:bg-[#95764f] transition-colors duration-300 cursor-pointer"
           >
             <ChevronRight size={20} />
           </button>
@@ -113,6 +119,7 @@ export const Booking = () => {
               ))}
             </Swiper>
           </div>
+          <div className="mb-[60px]"></div>
         </div>
       </div>
     </section>

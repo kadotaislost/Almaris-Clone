@@ -40,7 +40,7 @@ export const Hero = () => {
               <div className="mb-[16px] text-[#ab8965] tracking-[2px] font-semibold text-[13px] font-jost">
                 MADE BY ELITE AUTHOR
               </div>
-              <h1 className="mb-[20px] text-white font-marcellus text-[64px] leading-[1.2]">
+              <h1 className="mb-[20px] text-white font-marcellus text-[48px] md:text-[64px] leading-[1.2]">
                 Luxury Hotel and Booking WordPress Theme
               </h1>
               <a
@@ -51,7 +51,7 @@ export const Hero = () => {
               </a>
             </div>
           </div>
-          <div className="flex justify-center text-white font-normal mt-20 text-[16px] font-jost">
+          <div className="hidden lg:flex justify-center text-white font-normal mt-20 text-[16px] font-jost">
             <div className="px-6 mx-6">Trusted by 10,000+</div>
             <div className="px-6 mx-6">Made by Elite Author</div>
             <div className="px-6 mx-6">Lifetime Free Update</div>

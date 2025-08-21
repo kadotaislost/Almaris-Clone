@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
+import { Menu } from "lucide-react";
+import { Minus } from "lucide-react";
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const controlNavbar = () => {
@@ -28,12 +31,15 @@ const Header = () => {
   }, [lastScrollY]);
 
   return (
+    // set navbar background to 181818 on screen less than lg
     <header
-      className={`p-4 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`${
+        isMobileMenuOpen ? "min-h-screen" : ""
+      } p-4 fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#181818] ${
         isVisible ? "transform translate-y-0" : "transform -translate-y-full"
-      } ${isScrolled ? "bg-[#181818] shadow-lg" : "bg-transparent"}`}
+      } ${isScrolled ? "lg:bg-[#181818] shadow-lg" : "lg:bg-transparent"}`}
     >
-      <div className=" max-w-[1200px]  mx-auto mt-2">
+      <div className={`w-full max-w-[1200px]  mx-auto mt-2 `}>
         <nav className="flex justify-between items-center font-medium ">
           <div>
             <a href="#">
@@ -46,7 +52,7 @@ const Header = () => {
           </div>
 
           <div>
-            <ul className="flex space-x-[30px] font-jost font-normal">
+            <ul className="hidden lg:flex space-x-[30px] font-jost font-normal">
               <li>
                 <a href="#" className="text-white">
                   Intro
@@ -64,8 +70,8 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <div className="flex items-center justify-center">
-            <div className="ml-[20px] border border-[rgba(255,255,255,0.5)] py-[5px] px-[20px] hover:bg-[#ab8965] transition-colors duration-300">
+          <div className="flex gap-4">
+            <div className="hidden ml-[20px] border border-[rgba(255,255,255,0.5)] py-[10px] px-[20px] hover:bg-[#ab8965] transition-colors duration-300 sm:flex items-center justify-center">
               <a
                 href="#"
                 className="text-white text-xs tracking-[2px] font-semibold font-jost"
@@ -73,9 +79,47 @@ const Header = () => {
                 PURCHASE NOW
               </a>
             </div>
+            <div className="lg:hidden">
+              <button
+                onClick={() => {
+                  setIsMobileMenuOpen(!isMobileMenuOpen);
+                }}
+              >
+                {isMobileMenuOpen ? (
+                  <Minus className="w-8 h-8 text-white cursor-pointer" />
+                ) : (
+                  <Menu className="w-8 h-8 text-white cursor-pointer" />
+                )}
+              </button>
+            </div>
           </div>
+
+          {/* Mobile Menu that takes all the screen height with 181818 background and has the ul elements*/}
         </nav>
       </div>
+
+      {/* mobile menu after clicking the burger icon  */}
+      {isMobileMenuOpen && (
+        <div className="mt-8">
+          <ul className="flex flex-col lg:hidden items-start justify-start h-full text-[17px] font-normal font-jost">
+            <li className="py-[10px] border-b border-[rgba(255,255,255,0.2)] w-full">
+              <a href="#" className="text-white py-4">
+                Intro
+              </a>
+            </li>
+            <li className="py-[10px] border-b border-[rgba(255,255,255,0.2)] w-full">
+              <a href="#" className="text-white py-4">
+                Demos
+              </a>
+            </li>
+            <li className="py-[10px] border-b border-[rgba(255,255,255,0.2)] w-full">
+              <a href="#" className="text-white py-4">
+                Features
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
     </header>
   );
 };
