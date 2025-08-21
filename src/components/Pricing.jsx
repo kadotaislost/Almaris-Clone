@@ -56,7 +56,11 @@ export const Pricing = () => {
 
   return (
     <section className="min-h-screen bg-white px-4 lg:px-12">
-      <div className="max-w-[1824px] mx-auto px-4 bg-[#181818] rounded-xl py-[48px]">
+      <div
+        className="max-w-[1824px] mx-auto px-4 bg-[#181818] rounded-xl py-[48px]"
+        data-aos="fade-up"
+        data-aos-easing="ease-out"
+      >
         <div className="mb-[60px]"></div>
         <SectionHeader
           subtitle="EASY HOTEL BOOKING"
@@ -64,7 +68,7 @@ export const Pricing = () => {
           description="Build and manage your hotel site like a pro, with high-end tools included at no extra cost."
           bgwhite={false}
         />
-      
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] px-[48px] pb-[48px] auto-rows-fr">
           {pricingData.map((card, index) => (
             <div
@@ -74,6 +78,9 @@ export const Pricing = () => {
                   ? "lg:col-start-2"
                   : ""
               }`}
+              data-aos="fade-up"
+              data-aos-easing="ease-out"
+              data-aos-delay={50 + index * 100}
             >
               <PricingCard
                 image={card.image}

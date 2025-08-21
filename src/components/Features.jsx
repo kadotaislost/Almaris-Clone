@@ -1,5 +1,6 @@
 import { SectionHeader } from "./SectionHeader";
 import { FeatureCard } from "./FeatureCard";
+
 export const Features = () => {
   const features = [
     {
@@ -27,22 +28,29 @@ export const Features = () => {
       alt: "Pre-designed templates",
     },
   ];
+
   return (
-    <section className="min-h-screen bg-[#181818]  relative z-50 py-[70px] lg:py-[140px] lg:px-8">
-      <div className="max-w-[1824px] mx-auto px-4 ">
+    <section className="min-h-screen bg-[#181818] relative z-50 py-[70px] lg:py-[140px] lg:px-8">
+      <div className="max-w-[1824px] mx-auto px-4">
         <SectionHeader
           subtitle="POWERFULL FEATURES"
           title="Effortlessly Create a Hotel Website"
         />
         <div className="flex flex-col lg:flex-row gap-8 items-start">
           {features.map((feature, index) => (
-            <FeatureCard
+            <div
               key={index}
-              image={feature.image}
-              title={feature.title}
-              description={feature.description}
-              alt={feature.alt}
-            />
+              data-aos="fade-up"
+              data-aos-easing="ease-out"
+              data-aos-delay={500 + index * 200} 
+            >
+              <FeatureCard
+                image={feature.image}
+                title={feature.title}
+                description={feature.description}
+                alt={feature.alt}
+              />
+            </div>
           ))}
         </div>
       </div>

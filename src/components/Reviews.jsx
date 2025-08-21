@@ -60,7 +60,9 @@ export const Reviews = () => {
           title="What Our Customers Saying"
           bgwhite={true}
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[30px]">
+
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[30px]" data-aos= "fade-up" data-aos-easing = "ease-out">
           {reviewsData.map((review, index) => (
             <ReviewCard
               key={index}

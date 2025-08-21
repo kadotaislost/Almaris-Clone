@@ -7,7 +7,11 @@ export const DemoCard = ({ href, imgSrc, title }) => {
         rel="noopener noreferrer"
         className="block hover:shadow-[5px_20px_40px_5px_rgba(0,0,0,0.1)] transition-shadow duration-300"
       >
-        <img src={imgSrc} alt={title} className="w-full h-auto rounded-lg" />
+        <img src={imgSrc} alt={title} className="w-full h-auto rounded-lg"
+        data-aos="zoom-out" 
+        data-aos-easing="ease-out"
+        data-aos-duration = "800"
+      />
       </a>
       <h5 className="font-marcellus text-[18px] font-bold mt-4">{title}</h5>
     </div>

@@ -1,6 +1,6 @@
 export const ReviewCard = ({ category, review, author }) => {
   return (
-    <div className="border border-gray-300 rounded-lg shadow-2xl bg-white">
+    <div className="border border-gray-300 rounded-lg shadow-2xl bg-white" data-aos="fade-up" data-aos-easing="ease-out">
       <div className="p-[30px]">
         <div className="pb-[24px] text-[18px] font-normal text-[#8c8c8c] font-jost">
           For <span className="font-semibold text-black">{category}</span>

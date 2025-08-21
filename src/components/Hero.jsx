@@ -1,9 +1,19 @@
 import { useState, useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
+    // Initialize AOS
+    AOS.init({
+      duration: 600, // Animation duration in milliseconds
+      easing: 'ease-out',
+      once: true, // Animation happens only once
+      offset: 100 // Offset from the original trigger point
+    });
+
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
@@ -25,11 +35,13 @@ export const Hero = () => {
           style={{
             transform: `translateY(${imageTransform}px)`,
           }}
+        
         >
           <img
             src="https://themewant.com/products/wordpress/landing/almaris/demo-wp/ss-left.webp"
             alt="image-left"
             className="w-full h-auto"
+              data-aos = "fade-right"
           />
         </div>
 
@@ -37,21 +49,42 @@ export const Hero = () => {
         <div className="max-w-[1200px] mx-auto z-10">
           <div className="flex justify-center items-center mt-16 px-2">
             <div className="text-center max-w-[1000px] mx-auto">
-              <div className="mb-[16px] text-[#ab8965] tracking-[2px] font-semibold text-[13px] font-jost">
+              {/* Made by Elite Author - First animation */}
+              <div 
+                className="mb-[16px] text-[#ab8965] tracking-[2px] font-semibold text-[13px] font-jost"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
                 MADE BY ELITE AUTHOR
               </div>
-              <h1 className="mb-[20px] text-white font-marcellus text-[48px] md:text-[64px] leading-[1.2]">
+              
+              {/* Main title - Second animation */}
+              <h1 
+                className="mb-[20px] text-white font-marcellus text-[48px] md:text-[64px] leading-[1.2]"
+                data-aos="fade-up"
+                data-aos-delay="500"
+              >
                 Luxury Hotel and Booking WordPress Theme
               </h1>
+              
+              {/* Button - Third animation */}
               <a
                 href="#"
                 className="py-[10px] px-[20px] bg-[#ab8965] font-jost text-white text-[12px] text-center tracking-[2px] font-medium hover:shadow-[0_0_15px_rgba(0,0,0,0.3)] transition-all duration-300"
+                data-aos="fade-up"
+                data-aos-delay="700"
               >
                 VIEW DEMO
               </a>
             </div>
           </div>
-          <div className="hidden lg:flex justify-center text-white font-normal mt-20 text-[16px] font-jost">
+          
+          {/* Bottom stats - Fourth animation */}
+          <div 
+            className="hidden lg:flex justify-center text-white font-normal mt-20 text-[16px] font-jost"
+            data-aos="fade-up"
+            data-aos-delay="800"
+          >
             <div className="px-6 mx-6">Trusted by 10,000+</div>
             <div className="px-6 mx-6">Made by Elite Author</div>
             <div className="px-6 mx-6">Lifetime Free Update</div>
@@ -64,16 +97,18 @@ export const Hero = () => {
           style={{
             transform: `translateY(${imageTransform}px)`,
           }}
+         
         >
           <img
             src="https://themewant.com/products/wordpress/landing/almaris/demo-wp/ss-right.webp"
             alt="image-right"
             className="w-full h-auto"
+             data-aos="fade-left"
           />
         </div>
 
         {/* gradiant */}
-        <div class="absolute bottom-0 h-[30%] w-full bg-gradient-to-t from-[#ab8965]/80 from-25% to-transparent"></div>
+        <div className="absolute bottom-0 h-[30%] w-full bg-gradient-to-t from-[#ab8965]/80 from-25% to-transparent"></div>
       </main>
     </section>
   );

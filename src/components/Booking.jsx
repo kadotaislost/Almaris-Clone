@@ -45,7 +45,8 @@ export const Booking = () => {
 
   return (
     <section className="min-h-screen bg-white py-[140px] px-4 lg:px-12">
-      <div className="max-w-[1824px] mx-auto bg-[#181818] rounded-xl px-4 py-[48px] relative">
+      <div className="max-w-[1824px] mx-auto bg-[#181818] rounded-xl px-4 py-[48px] relative"
+      data-aos ="fade-up">
         <div className="mb-[60px]"></div>
         <div className="w-full max-w-[1232px] mx-auto px-[48px]">
           <SectionHeader
@@ -57,18 +58,18 @@ export const Booking = () => {
         </div>
 
         {/* Carousel */}
-        <div>
+        <div data-aos= "fade-up" data-aos-easing = "ease-out" data-aos-duration = "800" data-aos-delay ="200">
           {/* Custom Navigation Buttons */}
           <button
             ref={prevRef}
-            className="absolute left-0 top-[75%] xs:top-[63%] transform -translate-y-1/2 z-10 rounded-r-full w-[40px] h-[40px] bg-[#ab8965] flex items-center justify-center text-white hover:bg-[#95764f] transition-colors duration-300 cursor-pointer"
+            className="absolute -left-4 top-[75%] xs:top-[45%] transform -translate-y-1/2 z-10 rounded-r-full w-[40px] h-[40px] bg-[#ab8965] flex items-center justify-center text-white hover:bg-[#95764f] transition-colors duration-300 cursor-pointer"
           >
             <ChevronLeft size={20} />
           </button>
           <button
             ref={nextRef}
-            className="absolute right-0 top-[75%] xs:top-[63%] transform -translate-y-1/2 z-10 rounded-l-full w-[40px] h-[40px] bg-[#ab8965] flex items-center justify-center text-white hover:bg-[#95764f] transition-colors duration-300 cursor-pointer"
-          >
+            className="absolute -right-4 top-[75%] xs:top-[45%] transform -translate-y-1/2 z-10 rounded-l-full w-[40px] h-[40px] bg-[#ab8965] flex items-center justify-center text-white hover:bg-[#95764f] transition-colors duration-300 cursor-pointer"
+          > 
             <ChevronRight size={20} />
           </button>
 
