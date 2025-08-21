@@ -28,13 +28,13 @@ export const Features = () => {
     },
   ];
   return (
-    <section className="min-h-screen bg-[#181818] flex items-center justify-center relative z-50">
+    <section className="min-h-screen bg-[#181818]  relative z-50 py-[70px] lg:py-[140px]">
       <div className="max-w-[1824px] mx-auto px-4 ">
         <SectionHeader
           subtitle="POWERFULL FEATURES"
           title="Effortlessly Create a Hotel Website"
         />
-        <div className="flex gap-8 items-start">
+        <div className="flex flex-col lg:flex-row gap-8 items-start">
           {features.map((feature, index) => (
             <FeatureCard
               key={index}

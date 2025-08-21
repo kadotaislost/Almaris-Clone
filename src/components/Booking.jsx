@@ -44,10 +44,10 @@ export const Booking = () => {
   ];
 
   return (
-    <section className="min-h-screen bg-white py-[140px]">
+    <section className="min-h-screen bg-white py-[140px] px-4">
       <div className="max-w-[1824px] mx-auto bg-[#181818] rounded-xl px-4 py-[48px] relative">
         <div className="mb-[60px]"></div>
-        <div className="w-[1232px] mx-auto px-[48px]">
+        <div className="w-full max-w-[1232px] mx-auto px-[48px]">
           <SectionHeader
             subtitle="BOOKING FEATURES"
             title="Room Management & Booking"
@@ -61,13 +61,13 @@ export const Booking = () => {
           {/* Custom Navigation Buttons */}
           <button
             ref={prevRef}
-            className="absolute left-0 top-[63%] transform -translate-y-1/2 z-10 rounded-r-full w-[40px] h-[40px] bg-[#ab8965] flex items-center justify-center text-white hover:bg-[#95764f] transition-colors duration-300 cursor-pointer"
+            className="absolute left-0 top-[75%] xs:top-[63%] transform -translate-y-1/2 z-10 rounded-r-full w-[40px] h-[40px] bg-[#ab8965] flex items-center justify-center text-white hover:bg-[#95764f] transition-colors duration-300 cursor-pointer"
           >
             <ChevronLeft size={20} />
           </button>
           <button
             ref={nextRef}
-            className="absolute right-0 top-[63%] transform -translate-y-1/2 z-10 rounded-l-full w-[40px] h-[40px] bg-[#ab8965] flex items-center justify-center text-white hover:bg-[#95764f] transition-colors duration-300 cursor-pointer"
+            className="absolute right-0 top-[75%] xs:top-[63%] transform -translate-y-1/2 z-10 rounded-l-full w-[40px] h-[40px] bg-[#ab8965] flex items-center justify-center text-white hover:bg-[#95764f] transition-colors duration-300 cursor-pointer"
           >
             <ChevronRight size={20} />
           </button>

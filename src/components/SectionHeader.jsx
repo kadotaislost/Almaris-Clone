@@ -3,7 +3,7 @@ export const SectionHeader = ({
   title, 
   subtitleColor = "#ab8965", 
   titleColor = "white",
-  titleSize = "text-[52px]",
+  titleSize = "text-[36px]",
   centered = true ,
   description,
   bgwhite = false
@@ -23,7 +23,7 @@ export const SectionHeader = ({
         {subtitle}
       </div>
       <h2 
-        className={`font-marcellus ${titleSize} ${alignment} mb-[8px]`}
+        className={`font-marcellus ${titleSize} md:text-[40px] lg:text-[52px] ${alignment} mb-[8px]`}
         style={{ color: titleColor }}
       >
         {title}

@@ -113,7 +113,7 @@ export const DemoPreview = () => {
     },
   ];
   return (
-    <section className="min-h-screen bg-white flex items-center justify-center py-[140px]">
+    <section className="min-h-screen bg-white flex items-center justify-center py-[70px] lg:py-[140px]">
       <div className="max-w-[1824px] mx-auto px-4 ">
         <SectionHeader
           subtitle="ALL DEMO ARE INCLUDED"
@@ -121,8 +121,7 @@ export const DemoPreview = () => {
           bgwhite={true}
         />
 
-        {/* layout that showcases various demo. i need 4 in one row */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {demoData.map((demo, index) => (
             <DemoCard
               key={index}

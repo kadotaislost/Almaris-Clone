@@ -5,7 +5,7 @@ export const Ending = () => {
         <div className="mb-[16px] text-[#ab8965] tracking-[2px] font-semibold text-[13px] font-jost">
           GET ALMARIS NOW
         </div>
-        <h1 className="mb-[20px] text-white font-marcellus text-[64px] leading-[1.2]">
+        <h1 className="mb-[20px] text-white font-marcellus text-[48px] md:text-[60px] lg:text-[64px] leading-[1.2]">
           Build stunning and powerfull hotel website in no time!
         </h1>
         <p className="font-jost text-[17px] font-light text-[#c3c3c3] mb-[20px]">

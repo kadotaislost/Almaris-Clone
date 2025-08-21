@@ -55,7 +55,7 @@ export const Pricing = () => {
   ];
 
   return (
-    <section className="min-h-screen bg-white">
+    <section className="min-h-screen bg-white px-4">
       <div className="max-w-[1824px] mx-auto px-4 bg-[#181818] rounded-xl py-[48px]">
         <div className="mb-[60px]"></div>
         <SectionHeader
@@ -64,7 +64,7 @@ export const Pricing = () => {
           description="Build and manage your hotel site like a pro, with high-end tools included at no extra cost."
           bgwhite={false}
         />
-        {/* grid that holds 3 of these pricing cards in a row */}
+      
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] px-[48px] pb-[48px] auto-rows-fr">
           {pricingData.map((card, index) => (
             <div

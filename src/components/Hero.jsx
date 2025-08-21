@@ -35,7 +35,7 @@ export const Hero = () => {
 
         {/* Center content */}
         <div className="max-w-[1200px] mx-auto z-10">
-          <div className="flex justify-center items-center mt-16">
+          <div className="flex justify-center items-center mt-16 px-2">
             <div className="text-center max-w-[1000px] mx-auto">
               <div className="mb-[16px] text-[#ab8965] tracking-[2px] font-semibold text-[13px] font-jost">
                 MADE BY ELITE AUTHOR

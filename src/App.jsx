@@ -19,7 +19,7 @@ function App() {
       <DemoPreview />
       <Pricing />
       <Reviews />
-      {/* <Booking /> */}
+      <Booking />
       <InnerPagePreview />
       <Ending />
       <BackToTop />
