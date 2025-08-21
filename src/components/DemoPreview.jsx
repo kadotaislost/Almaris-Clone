@@ -113,29 +113,25 @@ export const DemoPreview = () => {
     },
   ];
   return (
-    <section className="min-h-screen bg-white flex items-center justify-center py-[70px] lg:py-[140px] ">
-      <div
-        className="max-w-[1824px] mx-auto px-4 "
-     
-      >
+    <section className="min-h-screen bg-white flex items-center justify-center py-[70px] lg:py-[140px] px-4">
+      <div className="max-w-[1824px] mx-auto w-full">
         <SectionHeader
           subtitle="ALL DEMO ARE INCLUDED"
           title="Demo Preview"
           bgwhite={true}
         />
-        <div data-aos = "fade-up" data-aos-easing = "ease-out">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {demoData.map((demo, index) => (
-            <DemoCard
-              key={index}
-              href={demo.href}
-              imgSrc={demo.imgSrc}
-              title={demo.title}
-            />
-          ))}
+        <div data-aos="fade-up" data-aos-easing="ease-out">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+            {demoData.map((demo, index) => (
+              <DemoCard
+                key={index}
+                href={demo.href}
+                imgSrc={demo.imgSrc}
+                title={demo.title}
+              />
+            ))}
+          </div>
         </div>
-        </div>
-    
       </div>
     </section>
   );

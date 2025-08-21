@@ -66,15 +66,15 @@ export const InnerPagePreview = () => {
   ];
 
   return (
-    <section className="min-h-screen bg-white pb-[140px] lg:px-8">
-      <div className="max-w-[1824px] mx-auto px-4" data-aos = "fade-up">
+    <section className="min-h-screen bg-white pb-[140px] px-4 lg:px-8">
+      <div className="max-w-[1824px] mx-auto w-full" data-aos="fade-up">
         <SectionHeader
           subtitle="ALL DEMOS ARE INCLUDED"
           title="Inner Pages Preview"
           bgwhite={true}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {innerPagePreviewData.map((demo, index) => (
             <DemoCard
               key={index}
