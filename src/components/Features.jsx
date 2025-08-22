@@ -36,13 +36,14 @@ export const Features = () => {
           subtitle="POWERFULL FEATURES"
           title="Effortlessly Create a Hotel Website"
         />
-        <div className="flex flex-col lg:flex-row gap-8 items-start">
+        <div className="flex flex-col lg:flex-row gap-8 items-stretch">
           {features.map((feature, index) => (
             <div
               key={index}
               data-aos="fade-up"
               data-aos-easing="ease-out"
-              data-aos-delay={500 + index * 200} 
+              data-aos-delay={500 + index * 200}
+              className="flex-1"
             >
               <FeatureCard
                 image={feature.image}

@@ -1,6 +1,6 @@
 export const FeatureCard = ({ image, title, description, alt = "" }) => {
   return (
-    <div className="flex-1">
+    <div className="flex-1 h-full flex flex-col">
       <img
         src={image}
         alt={alt}
@@ -9,7 +9,7 @@ export const FeatureCard = ({ image, title, description, alt = "" }) => {
       <h3 className="text-[26px] text-white font-marcellus mb-[10px]">
         {title}
       </h3>
-      <p className="text-[#c3c3c3] font-jost font-normal leading-[1.7rem]">
+      <p className="text-[#c3c3c3] font-jost font-normal leading-[1.7rem] flex-grow">
         {description}
       </p>
     </div>
