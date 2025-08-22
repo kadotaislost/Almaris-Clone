@@ -113,15 +113,15 @@ export const DemoPreview = () => {
     },
   ];
   return (
-    <section className="min-h-screen bg-white flex items-center justify-center py-[70px] lg:py-[140px] px-4">
-      <div className="max-w-[1824px] mx-auto w-full">
+    <section className="min-h-screen bg-white flex items-center justify-center py-[70px] lg:py-[140px] px-2 sm:px-4 lg:px-8 overflow-hidden">
+      <div className="max-w-[1824px] mx-auto w-full px-2 md:px-4 lg:px-0">
         <SectionHeader
           subtitle="ALL DEMO ARE INCLUDED"
           title="Demo Preview"
           bgwhite={true}
         />
         <div data-aos="fade-up" data-aos-easing="ease-out">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
             {demoData.map((demo, index) => (
               <DemoCard
                 key={index}
